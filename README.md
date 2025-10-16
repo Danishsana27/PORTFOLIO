@@ -2,7 +2,7 @@
 # 👋 Hi, I'm Danish Sana
 
 🎓 **B.Tech in Computer Science, 2nd Year**  
-💻 **Skills:** C, C++, Python, HTML, CSS, JavaScript  
+💻 **Skills:** C, JAVA, Python, HTML, CSS, JavaScript  
 🚀 I love solving problems and building web projects.
 
 ## 📂 About this Repository
