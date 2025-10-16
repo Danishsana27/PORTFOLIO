@@ -9,5 +9,5 @@
 This is my **Portfolio Repository**, where I’ll upload my practice projects and code samples from labs.
 
 ## 🔗 Connect with Me
-- GitHub: [github.com/yourusername](https://github.com/\Danishsana27)
+- GitHub: [github.com/Danishsana27](https://github.com/\Danishsana27)
 - HackerRank: [hackerrank.com/yourusername](https://www.hackerrank.com/yourusername)
