@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    @apply bg-base;
+  }
+
+  body {
+    @apply bg-base text-ink font-body antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124, 111, 240, 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 90% 10%, rgba(67, 217, 200, 0.08), transparent);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: rgba(124, 111, 240, 0.35);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #7C6FF0;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0E14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #232B3A;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2c3648;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .section {
+    @apply relative mx-auto w-full max-w-6xl px-6 py-24 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply mb-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-cyan;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-6 bg-cyan/60;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-border bg-surface/60 backdrop-blur-xl;
+  }
+
+  .glass-card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-violet/40 hover:shadow-glow;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-grad-primary px-6 py-3 font-semibold text-[#0A0E14] transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-surface/60 px-6 py-3 font-medium text-ink backdrop-blur-xl transition-all duration-200 hover:border-violet/50 hover:bg-surface-raised;
+  }
+
+  .chip {
+    @apply rounded-md border border-border bg-surface-raised/80 px-2.5 py-1 font-mono text-xs text-ink-muted;
+  }
+
+  .nav-link {
+    @apply relative font-medium text-sm text-ink-muted transition-colors duration-200 hover:text-ink;
+  }
+
+  .nav-link.active {
+    @apply text-ink;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-semibold tracking-tight text-ink;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-grad-primary bg-clip-text text-transparent;
+  }
+
+  .bg-grid {
+    background-image: var(--tw-bg-grid, none);
+  }
+}
